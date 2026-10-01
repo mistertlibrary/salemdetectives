@@ -13,16 +13,17 @@ body{margin:0;background:#fff;color:var(--ink);font:13pt/1.55 var(--body)}
 .page:last-child{page-break-after:auto;break-after:auto}
 .head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid var(--ink);padding-bottom:4px;margin-bottom:18px;font:700 9pt var(--label);letter-spacing:.12em;text-transform:uppercase}
 .head .stamp{color:var(--stamp)}
-h1,h2{text-align:center;font-family:var(--label);text-transform:uppercase;letter-spacing:.06em;line-height:1.2}
+h1,h2{text-align:center;font-family:var(--body);font-weight:700;line-height:1.2}
 h1{font-size:18pt;margin:0 0 16px}
 h2{font-size:13pt;margin:22px 0 10px}
 p{margin:0 0 12px}
 ol,ul{margin:0 0 12px;padding-left:1.3em}
 li{margin-bottom:8px}
+.nameline{font:10pt var(--label);margin:-8px 0 14px}
 .name{font:10pt var(--label);margin-bottom:14px}
 .line{display:block;border-bottom:1px solid var(--rule);height:30px}
 .tags{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.tag{border:2px solid var(--ink);border-radius:4px;padding:12px;font:11pt/1.4 var(--label);min-height:3.9in;position:relative}
+.tag{border:2px solid var(--ink);border-radius:4px;padding:12px;font:11pt/1.4 var(--label);min-height:3.7in;position:relative}
 .tag:before{content:"";position:absolute;top:10px;right:12px;width:14px;height:14px;border:2px solid var(--ink);border-radius:50%}
 .tag b{display:block;font-size:12pt;margin-bottom:10px}
 .tag .f{margin-top:10px}
@@ -30,7 +31,12 @@ li{margin-bottom:8px}
 table{width:100%;border-collapse:collapse;font-size:11.5pt}
 th,td{border:1px solid var(--ink);padding:8px;vertical-align:top;text-align:left}
 th{font:700 9.5pt var(--label);text-transform:uppercase;letter-spacing:.06em;background:#efe7d6}
-td.w{height:.82in}
+td.w{height:auto}
+.hf{margin:3px 0 0;padding-left:1.1em;font-size:9.5pt;line-height:1.3}
+.hf li{margin-bottom:2px}
+.ra{font:9pt var(--label);color:var(--stamp)}
+td:first-child{width:46%}
+td{height:.78in;padding:6px 8px}
 .card{border:2px solid var(--ink);padding:14px 16px;margin-top:10px}
 .verse{font:15pt/2.4 var(--body);margin:10px auto 14px;padding:10px 24px;border:1px dashed var(--rule);width:fit-content;white-space:pre-line}
 .note{border-left:4px solid var(--stamp);padding:4px 0 4px 12px}
@@ -70,6 +76,7 @@ dd{margin:0}
 
 <section class="page">
   <div class="head"><span>Salem Case Files</span><span>Evidence Tags</span></div>
+  <p class="nameline">Name: ______________________________ &nbsp; Date: ______________</p>
   <div class="tags">
     <div class="tag"><b>EVIDENCE TAG No. ____</b>Word or item: ______________<div class="f">What it means: ______________</div><div class="f">Where I found it: ___________</div><div class="f">Draw or sketch it:</div><div class="box" aria-hidden="true"></div></div>
     <div class="tag"><b>EVIDENCE TAG No. ____</b>Word or item: ______________<div class="f">What it means: ______________</div><div class="f">Where I found it: ___________</div><div class="f">Draw or sketch it:</div><div class="box" aria-hidden="true"></div></div>
@@ -80,23 +87,25 @@ dd{margin:0}
 
 <section class="page">
   <div class="head"><span>Salem Case Files</span><span>Day 2</span></div>
+  <p class="nameline">Name: ______________________________ &nbsp; Date: ______________</p>
   <h1>Map Card: Village and Town</h1>
   <p>There were two Salems in 1692. Salem Village was a farm town. Today it is called Danvers. Salem Town was a busy port by the sea.</p>
+  <p>We will read some stops together. For each stop, try to answer both questions. You do not need to read every word!</p>
   <table>
-    <caption class="sr">Map card: five tour stops</caption><tr><th scope="col">Stop</th><th scope="col">Village or Town?</th><th scope="col">What happened here?</th></tr>
-    <tr><td>The Parsonage foundation</td><td class="w"></td><td></td></tr>
-    <tr><td>The Village Meetinghouse site</td><td class="w"></td><td></td></tr>
-    <tr><td>The Rebecca Nurse Homestead</td><td class="w"></td><td></td></tr>
-    <tr><td>The 1692 Courthouse site</td><td class="w"></td><td></td></tr>
-    <tr><td>The 1692 Jail site</td><td class="w"></td><td></td></tr>
+    <caption class="sr">Map card: five tour stops</caption><tr><th scope="col">Stop</th><th scope="col">Village or Town?</th><th scope="col">What happened here? Answer the Find questions.</th></tr>
+    <tr><td><b>The Parsonage foundation</b> <span class="ra">(read together)</span><ul class="hf"><li>Find: Who was the first girl to get sick?</li><li>Find: When did people dig up the foundation?</li></ul></td><td class="w"></td><td></td></tr>
+    <tr><td><b>The Village Meetinghouse site</b><ul class="hf"><li>Find: On what date were the first three accused people questioned here?</li><li>Find: Name one person who was questioned here.</li></ul></td><td class="w"></td><td></td></tr>
+    <tr><td><b>The Rebecca Nurse Homestead</b><ul class="hf"><li>Find: How old was Rebecca Nurse in 1692?</li><li>Find: What did the jury decide at first?</li></ul></td><td class="w"></td><td></td></tr>
+    <tr><td><b>The 1692 Courthouse site</b> <span class="ra">(read together)</span><ul class="hf"><li>Find: Who was the chief judge?</li><li>Find: How many people were hanged?</li></ul></td><td class="w"></td><td></td></tr>
+    <tr><td><b>The 1692 Jail site</b><ul class="hf"><li>Find: Two words that describe the jail.</li><li>Find: What did prisoners have to pay for?</li></ul></td><td class="w"></td><td></td></tr>
   </table>
-  <h2>Think</h2>
-  <p>How can trouble start in one place and end up in another?</p>
-  <span class="line" aria-hidden="true"></span><span class="line" aria-hidden="true"></span>
+  <p style="margin-top:12px"><b>Think:</b> How can trouble start in one place and end up in another?</p>
+  <span class="line" aria-hidden="true"></span>
 </section>
 
 <section class="page">
   <div class="head"><span>Salem Case Files</span><span>Day 3</span></div>
+  <p class="nameline">Name: ______________________________ &nbsp; Date: ______________</p>
   <h1>Place Profile: Whose Land?</h1>
   <p>Long before 1692, this land had another name: Naumkeag. It means "fishing place."</p>
   <p>The people of Naumkeag farmed, fished, and traded here. Between 1616 and 1619, a sickness brought by English traders killed many of them. English settlers arrived in 1626. They took more and more land.</p>
@@ -108,6 +117,7 @@ dd{margin:0}
 
 <section class="page">
   <div class="head"><span>Salem Case Files</span><span>Day 3</span></div>
+  <p class="nameline">Name: ______________________________ &nbsp; Date: ______________</p>
   <div class="card">
     <h2 style="margin-top:0">The Frontier War</h2>
     <p>In 1692, English towns in Maine were at war with Wabanaki people and their French allies. Many English families ran south to towns like Salem.</p>
@@ -120,6 +130,7 @@ dd{margin:0}
 
 <section class="page">
   <div class="head"><span>Salem Case Files</span><span>Day 4</span></div>
+  <p class="nameline">Name: ______________________________ &nbsp; Date: ______________</p>
   <h1>The Puritan World</h1>
   <p>Puritan children learned to read from a small book called <i>The New England Primer</i>. A printer named Benjamin Harris first made it in Boston around 1690. Puritans believed every person should be able to read the Bible.</p>
   <figure class="hfig"><img src="images/primer-1727-alphabet-gray.jpg" alt="The alphabet page of the 1727 New England Primer, rhymes A through F beside small woodcut pictures." width="517" height="775"><figcaption>The New-England Primer, 1727. Rare Book Division, New York Public Library.</figcaption></figure>
@@ -137,6 +148,7 @@ And after slay.</div>
 
 <section class="page">
   <div class="head"><span>Salem Case Files</span><span>Day 4</span></div>
+  <p class="nameline">Name: ______________________________ &nbsp; Date: ______________</p>
   <h2>Talk it over</h2>
   <p>Who was this book for?</p><span class="line" aria-hidden="true"></span>
   <p style="margin-top:10px">What does it want children to think and feel?</p><span class="line" aria-hidden="true"></span>
@@ -151,6 +163,7 @@ And after slay.</div>
 
 <section class="page">
   <div class="head"><span>Salem Case Files</span><span>Day 5</span></div>
+  <p class="nameline">Name: ______________________________ &nbsp; Date: ______________</p>
   <h1>Scene Summary</h1>
   <div class="frame">
     <p>The case happened in ________________ in the year ________.</p>
@@ -163,6 +176,7 @@ And after slay.</div>
 
 <section class="page">
   <div class="head"><span>Salem Case Files</span><span>Day 5</span></div>
+  <p class="nameline">Name: ______________________________ &nbsp; Date: ______________</p>
   <h1>Week 1 Vocabulary</h1>
   <dl>
     <dt>colony</dt><dd>a place ruled by a faraway country</dd>

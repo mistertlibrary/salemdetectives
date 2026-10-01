@@ -31,7 +31,7 @@
 [data-font="sans"]{--serif:var(--sans)}
 [data-font="dyslexic"]{--serif:"OpenDyslexic",sans-serif;--sans:"OpenDyslexic",sans-serif;--label:"OpenDyslexic",sans-serif}
 *{box-sizing:border-box}
-html{font-size:var(--base);scroll-padding-top:4rem}
+html{font-size:var(--base);scroll-padding-top:5.5rem}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);line-height:1.6;font-size:1.05rem}
 a{color:var(--link);text-underline-offset:3px}
 a:hover{text-decoration-thickness:2px}
@@ -44,14 +44,15 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offs
 .wrap{max-width:40rem;margin:0 auto;padding-block:1.6rem 4rem;padding-inline:16px}
 header.hero{text-align:center;margin-bottom:1rem}
 .stamp{display:inline-block;font:700 .8rem var(--label);letter-spacing:.14em;text-transform:uppercase;color:var(--stamp);border:2px solid var(--stamp);padding:3px 10px;transform:rotate(-2deg)}
-h1,h2,h3{text-align:center;text-wrap:balance;font-family:var(--label);line-height:1.2}
-h1{font-size:2rem;margin:.7rem 0 .2rem}
+h1,h2,h3{text-align:center;text-wrap:balance;font-family:var(--serif);font-weight:600;line-height:1.2}
+h1{font-size:2.3rem;margin:.7rem 0 .2rem}
 .sub{color:var(--muted);font:.95rem var(--sans);margin:0}
-nav.map ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:1.2rem 0 0;padding:0}
+nav.map{position:sticky;top:env(safe-area-inset-top,0px);z-index:8;background:var(--bg);padding-block:.5rem;margin-inline:-16px;padding-inline:16px;border-bottom:1px solid var(--rule)}
+nav.map ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:0;padding:0}
 nav.map a{display:block;font:700 .8rem var(--label);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:var(--ink);background:var(--tab);border:1px solid var(--rule);padding:8px 12px;border-radius:4px 4px 0 0}
 .sheet{background:var(--sheet);border:1px solid var(--rule);border-radius:3px;padding:1.4rem 1.3rem;margin-top:1.3rem;scroll-margin-top:12px}
-.sheet h2{font-size:1.3rem;margin:0 0 .8rem;text-transform:uppercase;letter-spacing:.05em}
-.sheet h3{font-size:1rem;letter-spacing:.06em;text-transform:uppercase;margin:1.3rem 0 .5rem}
+.sheet h2{font-size:1.55rem;margin:0 0 .8rem}
+.sheet h3{font-size:1.15rem;margin:1.3rem 0 .5rem}
 p{margin:0 0 .8rem}
 ul,ol{margin:0 0 .8rem;padding-left:1.3em}
 li{margin-bottom:.35rem}
@@ -84,7 +85,18 @@ footer .big{font-family:var(--serif);font-size:1.4rem;font-style:italic;margin:0
 .a11y-group button{font:inherit;padding:.3rem .65rem;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
 .a11y-group button[aria-pressed="true"]{background:var(--ink);color:var(--sheet)}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-@media (max-width:560px){.sheet{padding:1.1rem 1rem}}
+.stoplist{list-style:none;padding:0;margin:0 0 .8rem}
+.stop{margin-bottom:1rem}
+.stop>a{font-weight:600}
+.chip{display:table;margin:.3rem 0 .1rem;font:700 .68rem var(--label);letter-spacing:.06em;text-transform:uppercase;color:var(--stamp);border:1.5px solid var(--stamp);padding:1px 6px;vertical-align:middle}
+.finds{list-style:none;padding-left:.9rem;margin:.3rem 0 0;border-left:2px solid var(--rule)}
+.finds li{margin-bottom:.2rem;font-size:.95rem}
+.exhibit{float:right;width:min(13rem,42%);margin:.2rem 0 1rem 1.4rem}
+#home::after{content:"";display:block;clear:both}
+.exhibit img{display:block;width:100%;height:auto;border:1px solid var(--rule);box-shadow:0 2px 10px rgba(0,0,0,.18);transform:rotate(-1deg)}
+.exhibit figcaption{font:.85rem/1.45 var(--sans);color:var(--muted);text-align:center;margin-top:.7rem}
+@media (prefers-reduced-motion:reduce){.exhibit img{transform:none}}
+@media (max-width:560px){.exhibit{float:none;width:auto;max-width:15rem;margin:0 auto 1rem}.sheet{padding:1.1rem 1rem}}
 </style>
 </head>
 <body>
@@ -95,14 +107,18 @@ footer .big{font-family:var(--serif);font-size:1.4rem;font-style:italic;margin:0
   <span class="stamp">Case No. 1692</span>
   <h1>Salem Case Files</h1>
   <p class="sub">Week 1: The Scene</p>
+</header>
   <nav class="map" aria-label="Case file sections">
     <ul><li><a href="#home">The Case</a></li><li><a href="#rules">Rules</a></li><li><a href="#day1">Day 1</a></li><li><a href="#day2">Day 2</a></li><li><a href="#day3">Day 3</a></li><li><a href="#day4">Day 4</a></li><li><a href="#day5">Day 5</a></li></ul>
   </nav>
-</header>
 <main id="main-content">
 
 <section class="sheet" id="home">
   <h2>The Case</h2>
+  <figure class="exhibit">
+    <a href="images/bishop-warrant-1692.jpg"><img src="images/bishop-warrant-1692.jpg" alt="A handwritten court order from 1692, brown ink on stained, torn paper, with a red wax seal on the left. A second, different handwriting at the bottom is the sheriff's report." width="1200" height="1910"></a>
+    <figcaption>Exhibit A: Warrant for the execution of Bridget Bishop, June 1692. Massachusetts Supreme Judicial Court Archives. Image: Phillips Library, Peabody Essex Museum.</figcaption>
+  </figure>
   <p>In 1692, a group of very religious people in Massachusetts said their neighbors were witches. They tried the people they accused in court. By the end of it all, twenty people were put to death.</p>
   <p>Today, we know the accused were innocent. Your job is to find out how this happened.</p>
   <p>You will read real records from 1692. You will collect evidence to create a case file. At the end of this project, you will report what went wrong.</p>
@@ -146,20 +162,21 @@ footer .big{font-family:var(--serif);font-size:1.4rem;font-style:italic;margin:0
     <li>Village or Town?</li>
     <li>What happened here?</li>
   </ul>
+  <p>We will read some stops together. For each stop, try to answer both questions. You do not need to read every word!</p>
   <div class="stops">
     <div>
       <h3>Salem Village stops</h3>
-      <ul>
-        <li><a href="https://salemwitchmuseum.com/locations/site-of-salem-village-parsonage/" target="_blank" rel="noopener">The Parsonage foundation<span class="sr"> (opens in a new tab)</span></a></li>
-        <li><a href="https://salemwitchmuseum.com/locations/first-meetinghouse-of-salem-village-site-of/" target="_blank" rel="noopener">The Village Meetinghouse site<span class="sr"> (opens in a new tab)</span></a></li>
-        <li><a href="https://salemwitchmuseum.com/locations/rebecca-nurse-homestead/" target="_blank" rel="noopener">The Rebecca Nurse Homestead<span class="sr"> (opens in a new tab)</span></a></li>
+      <ul class="stoplist">
+        <li class="stop"><a href="https://salemwitchmuseum.com/locations/site-of-salem-village-parsonage/" target="_blank" rel="noopener">The Parsonage foundation<span class="sr"> (opens in a new tab)</span></a><span class="chip">Read together</span><ul class="finds"><li><b>Find:</b> Who was the first girl to get sick?</li><li><b>Find:</b> When did people dig up the foundation?</li></ul></li>
+        <li class="stop"><a href="https://salemwitchmuseum.com/locations/first-meetinghouse-of-salem-village-site-of/" target="_blank" rel="noopener">The Village Meetinghouse site<span class="sr"> (opens in a new tab)</span></a><ul class="finds"><li><b>Find:</b> On what date were the first three accused people questioned here?</li><li><b>Find:</b> Name one person who was questioned here.</li></ul></li>
+        <li class="stop"><a href="https://salemwitchmuseum.com/locations/rebecca-nurse-homestead/" target="_blank" rel="noopener">The Rebecca Nurse Homestead<span class="sr"> (opens in a new tab)</span></a><ul class="finds"><li><b>Find:</b> How old was Rebecca Nurse in 1692?</li><li><b>Find:</b> What did the jury decide at first?</li></ul></li>
       </ul>
     </div>
     <div>
       <h3>Salem Town stops</h3>
-      <ul>
-        <li><a href="https://salemwitchmuseum.com/locations/salem-courthouse-in-1692-site-of/" target="_blank" rel="noopener">The 1692 Courthouse site<span class="sr"> (opens in a new tab)</span></a></li>
-        <li><a href="https://salemwitchmuseum.com/locations/salem-jail-in-1692-site-of/" target="_blank" rel="noopener">The 1692 Jail site<span class="sr"> (opens in a new tab)</span></a></li>
+      <ul class="stoplist">
+        <li class="stop"><a href="https://salemwitchmuseum.com/locations/salem-courthouse-in-1692-site-of/" target="_blank" rel="noopener">The 1692 Courthouse site<span class="sr"> (opens in a new tab)</span></a><span class="chip">Read together</span><ul class="finds"><li><b>Find:</b> Who was the chief judge?</li><li><b>Find:</b> How many people were hanged?</li></ul></li>
+        <li class="stop"><a href="https://salemwitchmuseum.com/locations/salem-jail-in-1692-site-of/" target="_blank" rel="noopener">The 1692 Jail site<span class="sr"> (opens in a new tab)</span></a><ul class="finds"><li><b>Find:</b> Two words that describe the jail.</li><li><b>Find:</b> What did prisoners have to pay for?</li></ul></li>
       </ul>
     </div>
   </div>
