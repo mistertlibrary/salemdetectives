@@ -1,0 +1,66 @@
+{
+  "lyceum": 1,
+  "title": "Salem Case Files",
+  "description": "A true-crime case review of the Salem witch trials of 1692, built on primary sources.",
+  "url": "https://mistertlibrary.github.io/salemdetectives/",
+  "series": "",
+  "course": "",
+  "subjects": [
+    "Social Studies"
+  ],
+  "sections": [
+    {
+      "title": "The Case",
+      "anchor": "#home",
+      "keywords": [
+        "Salem witch trials",
+        "1692",
+        "true crime"
+      ]
+    },
+    {
+      "title": "Investigator Rules",
+      "anchor": "#rules",
+      "keywords": []
+    },
+    {
+      "title": "Day 1: Open the Case",
+      "anchor": "#day1",
+      "keywords": [
+        "Peabody Essex Museum"
+      ]
+    },
+    {
+      "title": "Day 2: Village and Town",
+      "anchor": "#day2",
+      "keywords": [
+        "Danvers",
+        "Salem Village"
+      ]
+    },
+    {
+      "title": "Day 3: Whose Land?",
+      "anchor": "#day3",
+      "keywords": [
+        "Naumkeag",
+        "Wabanaki",
+        "King William's War"
+      ]
+    },
+    {
+      "title": "Day 4: The Puritan World",
+      "anchor": "#day4",
+      "keywords": [
+        "New England Primer",
+        "Puritans"
+      ]
+    },
+    {
+      "title": "Day 5: Scene Summary",
+      "anchor": "#day5",
+      "keywords": [
+        "vocabulary"
+      ]
+    }
+  ]
+}
